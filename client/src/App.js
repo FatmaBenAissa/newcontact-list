@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbarr from './components/Navbarr';
@@ -15,7 +15,7 @@ function App() {
   const [ping, setping] = useState(false)
   useEffect(() => {
        dispatch(getusers())
-  }, [ping])
+  }, [dispatch, ping])
   
   return (
     <div className="App">
