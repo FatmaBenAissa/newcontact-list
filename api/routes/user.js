@@ -20,7 +20,7 @@ userRouter.get("/", async(req,res)=>{
         let result=await User.find();
         res.send({users:result, msg:"all users"})
     } catch (error) {
-        console.log(error)
+    res.status(500).json({ msg: error.message });
     }
 })
 
